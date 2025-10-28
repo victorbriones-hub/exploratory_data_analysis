@@ -1,1 +1,264 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
+# =============================================
+# GIT IGNORE PARA ENTORNO DE TRABAJO EDA
+# =============================================
+
+# ─────────────────────────────────────────────
+# DATOS Y ARCHIVOS SENSIBLES
+# ─────────────────────────────────────────────
+
+# Datos crudos y procesados
+**/data/raw/
+**/data/processed/
+**/data/interim/
+**/datos_comunes/**/*.csv
+**/datos_comunes/**/*.xlsx
+**/datos_comunes/**/*.parquet
+**/datos_comunes/**/*.feather
+
+# Archivos de datos grandes
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.json
+*.xml
+
+# Datos con información sensible
+**/*_confidencial*
+**/*_sensible*
+**/*_privado*
+**/client_data/
+**/personal_data/
+
+# ─────────────────────────────────────────────
+# CREDENCIALES Y CONFIGURACIONES
+# ─────────────────────────────────────────────
+
+# Archivos de configuración local
+config_local.yaml
+config_personal.yaml
+*.env
+.env.local
+.env.production
+.secrets
+credentials.json
+service_account.json
+conexiones.db
+
+# API keys y tokens
+**/api_keys.py
+**/tokens.py
+**/passwords.py
+
+# Conexiones a bases de datos
+**/database_connections.py
+**/db_config.py
+
+# ─────────────────────────────────────────────
+# ENTORNOS VIRTUALES Y PAQUETES
+# ─────────────────────────────────────────────
+
+# Entornos virtuales
+.env
+.venv
+venv/
+env/
+ENV/
+
+# Dependencias de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ─────────────────────────────────────────────
+# NOTEBOOKS Y ARCHIVOS TEMPORALES
+# ─────────────────────────────────────────────
+
+# Jupyter notebooks
+**/.ipynb_checkpoints
+**/ipynb_checkpoints/
+**/*.ipynb_checkpoints
+
+# Archivos temporales de notebooks
+**/.history/
+**/notebooks/auto_save/
+
+# Cache de notebooks
+**/.jupyter_cache/
+
+# ─────────────────────────────────────────────
+# OUTPUTS Y REPORTES TEMPORALES
+# ─────────────────────────────────────────────
+
+# Reportes temporales
+**/reports/temp/
+**/reports/draft/
+**/reports/figures/temp/
+
+# Outputs de modelos
+**/models/temp/
+**/models/training_artifacts/
+
+# Cache de visualizaciones
+**/cache/
+**/.cache/
+
+# ─────────────────────────────────────────────
+# ARCHIVOS DEL SISTEMA Y IDE
+# ─────────────────────────────────────────────
+
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# ─────────────────────────────────────────────
+# LOGS Y ARCHIVOS DE REGISTRO
+# ─────────────────────────────────────────────
+
+# Logs
+*.log
+logs/
+**/logs/
+**/*.log.*
+
+# Debug files
+debug/
+**/debug/
+*.debug
+
+# ─────────────────────────────────────────────
+# ARCHIVOS ESPECÍFICOS DE EDA
+# ─────────────────────────────────────────────
+
+# Cache de datos frecuentes
+**/datos_comunes/temporales/
+**/datos_comunes/cache/
+
+# Archivos de sesión
+*.session
+*.state
+
+# Backup de análisis
+**/backup/
+**/*.backup.*
+**/old/
+**/archive/
+
+# Exportaciones temporales
+**/export/
+**/tmp_export/
+
+# ─────────────────────────────────────────────
+# ARCHIVOS DE OFIMÁTICA TEMPORALES
+# ─────────────────────────────────────────────
+
+# Office temporales
+~$*.xlsx
+~$*.xls
+~$*.docx
+~$*.pptx
+
+# PDFs temporales
+**/reports/temp_pdf/
+
+# Presentaciones en progreso
+**/reports/draft_presentations/
+
+# ─────────────────────────────────────────────────────
+# EXCEPCIONES - LO QUE SÍ DEBEMOS VERSIONAR
+# ─────────────────────────────────────────────────────
+
+# ¡Estos archivos SÍ deben versionarse!
+!plantillas/**/data/sample_data.csv
+!plantillas/**/config.yaml.example
+!utilidades/configuraciones/config_global.yaml.example
+!utilidades/configuraciones/estilos_graficos.mplstyle
+
+# Scripts de utilidad siempre se versionan
+!utilidades/scripts/
+!utilidades/herramientas/
+
+# Documentación y biblioteca
+!biblioteca/snippets/
+!biblioteca/ejemplos/
+!biblioteca/referencias/
+
+# Plantillas de proyectos
+!plantillas/eda_standard/
+!plantillas/eda_avanzado/  
+!plantillas/eda_rapido/
+
+# Configuración del proyecto
+!.gitignore
+!README.md
+!environment.yml.example
+!requirements.txt.example
+
+# ─────────────────────────────────────────────────────
+# REGLAS ESPECÍFICAS PARA CARPETAS
+# ─────────────────────────────────────────────────────
+
+# En proyectos, ignorar datos pero mantener estructura
+proyectos/**/data/
+!proyectos/**/data/README.md
+
+# En trabajo_actual, ignorar contenido pero mantener estructura
+trabajo_actual/en_progreso/*
+!trabajo_actual/en_progreso/README.md
+trabajo_actual/pendientes_revision/*
+!trabajo_actual/pendientes_revision/README.md
+
+# En archivos_administrativos, ignorar datos personales
+archivos_administrativos/tiempos/personal/
+archivos_administrativos/reportes_entregables/borradores/
