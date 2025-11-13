@@ -15,7 +15,7 @@ def create_project(nombre_proyecto):
     ruta_destino = Path(ruta_destino) if ruta_destino else Path.cwd()
     proyecto_path = (ruta_destino / nombre_proyecto).resolve()
     proyecto_path.mkdir(parents=True, exist_ok=True)
-    subdirectorios = ['data', 'notebooks', 'src', 'reports', 'docs', 'tests']
+    subdirectorios = ['data', 'notebooks', 'src', 'reports', 'docs', 'tests', 'config']
 
     print("Creando estructura de directorios... 🔄")
 
@@ -33,4 +33,4 @@ def create_project(nombre_proyecto):
 
 
 # Ejemplo de uso:
-create_project("principales_indicadores_internos")
+create_project("indicadores_dibildox")
