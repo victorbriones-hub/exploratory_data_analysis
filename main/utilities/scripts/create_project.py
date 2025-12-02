@@ -33,4 +33,4 @@ def create_project(nombre_proyecto):
 
 
 # Ejemplo de uso:
-create_project("indicadores_dibildox")
+create_project("forecasting_sales")
